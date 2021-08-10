@@ -1,0 +1,63 @@
+@import '../variable';
+@import '../reset';
+
+.list-projects {
+  background-color: $grey-200;
+  padding: 5rem 0;
+
+  &__title {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__items {
+    display: grid;
+    gap: 3rem 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    margin: 0 auto 2rem;
+    max-width: $max-width;
+    width: 90vw;
+    &__project {
+      background-color: $white;
+      border-radius: $borderRadius;
+      box-shadow: $shadow-1;
+      transition: $transition;
+
+      &:hover {
+        box-shadow: $shadow-2;
+        transform: scale(1.05);
+      }
+
+      &__image-wrapper {
+        height: 15rem;
+        overflow: hidden;
+        div {
+          display: block;
+          max-width: 1000px;
+        }
+      }
+
+      img {
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+        display: block;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        padding: 0;
+        position: static;
+        width: 100%;
+      }
+
+      h5 {
+        background-color: $white;
+        border-bottom-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+        color: $black;
+        margin: 0;
+        padding: 1rem 1.25rem;
+        text-align: center;
+      }
+    }
+  }
+}
