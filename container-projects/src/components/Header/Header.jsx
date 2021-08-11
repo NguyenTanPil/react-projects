@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.scss';
-import titleImage from '../../images/title-image.svg';
 
 export const Header = () => {
   return (
@@ -20,9 +19,6 @@ export const Header = () => {
           >
             Go to my Github
           </a>
-        </div>
-        <div className="header-center_img">
-          <img src={titleImage} alt="project" />
         </div>
       </div>
     </header>

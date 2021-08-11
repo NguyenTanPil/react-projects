@@ -1,10 +1,11 @@
 import React from 'react';
 
-export const Project = ({ name, image }) => {
+export const Project = ({ link, name, image }) => {
   return (
     <a
       className="list-projects__items__project"
-      href="https://github.com/"
+      href={link}
+      rel="noreferrer noopener"
       target="_blank"
     >
       <div className="list-projects__items__project__image-wrapper">

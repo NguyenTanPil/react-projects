@@ -11,8 +11,10 @@ function App() {
     const formatData = (projects) => {
       const data = projects.map((project) => {
         const id = project.sys.id;
+        const image = project.fields.image.fields.file.url;
+        const { link, name } = project.fields;
 
-        const newProject = { ...project.fields, id };
+        const newProject = { id, image, link, name };
         return newProject;
       });
       return data;
