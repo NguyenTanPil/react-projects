@@ -1,11 +1,11 @@
 import { Bars, Nav, NavIcon, NavLink } from './NavbarStyled';
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
         <NavLink to="/">Pizza</NavLink>
-        <NavIcon>
+        <NavIcon onClick={toggle}>
           <p>menu</p>
           <Bars />
         </NavIcon>
