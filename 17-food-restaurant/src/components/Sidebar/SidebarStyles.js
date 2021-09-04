@@ -10,7 +10,7 @@ export const SidebarContainer = styled.aside`
   position: fixed;
   top: 0;
   right: ${({ isOpen }) => (isOpen ? '0' : '-100rem')};
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
   width: 35rem;
   z-index: 1008;
 

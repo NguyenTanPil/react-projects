@@ -89,7 +89,13 @@ export const GlobleStyles = createGlobalStyle`
     font: inherit;
     vertical-align: baseline;
   }
-
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
   html {
     font-size: 62.5%;
   }

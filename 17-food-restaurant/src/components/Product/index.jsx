@@ -1,26 +1,39 @@
 import React from 'react';
-import { productData as data } from './data.js';
+import {
+  ProductButton,
+  ProductCart,
+  ProductContainer,
+  ProductDesc,
+  ProductHeading,
+  ProductImg,
+  ProductInfo,
+  ProductPrice,
+  ProductTitle,
+  ProductWrapper,
+} from './ProductsStyles.js';
 
-const Products = () => {
+const Products = ({ heading, data }) => {
   return (
-    <ProductsContainer>
-      <ProductsHeading>heading</ProductsHeading>
-      <ProductsWrapper>
+    <ProductContainer>
+      <ProductHeading>{heading}</ProductHeading>
+      <ProductWrapper>
         {data.map((product, index) => {
           const { img, name, desc, price, button, alt } = product;
 
-          <ProductCart key={index}>
-            <ProductImg src={img} alt={alt} />
-            <ProductInfo>
-              <ProductTitle>{name}</ProductTitle>
-              <ProductDesc>{desc}</ProductDesc>
-              <ProductPrice>{price}</ProductPrice>
-              <ProductButton>{button}</ProductButton>
-            </ProductInfo>
-          </ProductCart>;
+          return (
+            <ProductCart key={index}>
+              <ProductImg src={img} alt={alt} />
+              <ProductInfo>
+                <ProductTitle>{name}</ProductTitle>
+                <ProductDesc>{desc}</ProductDesc>
+                <ProductPrice>{price}</ProductPrice>
+                <ProductButton>{button}</ProductButton>
+              </ProductInfo>
+            </ProductCart>
+          );
         })}
-      </ProductsWrapper>
-    </ProductsContainer>
+      </ProductWrapper>
+    </ProductContainer>
   );
 };
 
